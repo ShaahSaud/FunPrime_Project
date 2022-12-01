@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>txt_remote_config</key>
+        <value>Some Static Text</value>
+    </entry>
+</defaultsMap>

@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 33
+        versionCode 2
+        versionName "1.1"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pgcfg'
+            consumerProguardFiles 'proguard-rules.pgcfg'
+        }
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pgcfg'
+            consumerProguardFiles 'proguard-rules.pgcfg'
+        }
+    }
+
+//    lintOptions {
+//        resourcePrefix 'gnt_'
+//    }
+}
+
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    //noinspection GradleCompatible
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.9.2'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.5.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    implementation 'com.google.android.gms:play-services-ads:21.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+}
